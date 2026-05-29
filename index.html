@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KC MASTERS | Effortless • Secure • Premium Logistics</title>
-    <!-- Font Awesome for Department Icons -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <title>KC Masters | Logistics, Motors & Flights</title>
     <style>
-        /* Premium Dark & Gold Theme Styling */
+        :root {
+            --primary: #1a365d;
+            --secondary: #2b6cb0;
+            --accent: #28a745;
+            --accent-hover: #218838;
+            --dark: #2d3748;
+            --light: #f7fafc;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -16,624 +22,297 @@
         }
 
         body {
-            background-color: #0b0c10;
-            color: #c5c6c8;
+            background-color: var(--light);
+            color: var(--dark);
             line-height: 1.6;
         }
 
         header {
-            background-color: #1f2833;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid #f39c12;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-
-        .nav-container {
-            width: 85%;
-            max-width: 1200px;
-            margin: 0 auto;
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .logo {
-            font-size: 26px;
-            font-weight: 800;
-            color: #f39c12;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
+        .logo h1 {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
         }
 
-        nav ul {
-            display: flex;
-            list-style: none;
+        .logo span {
+            color: #63b3ed;
         }
 
-        nav ul li {
-            margin-left: 25px;
-        }
-
-        nav ul li a {
-            color: #fff;
+        nav a {
+            color: white;
             text-decoration: none;
-            font-size: 16px;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #63b3ed;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(43, 108, 176, 0.85)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80') center/cover;
+            color: white;
+            padding: 8rem 5% 6rem;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
             font-weight: 600;
-            transition: color 0.3s ease;
+            transition: all 0.3s;
         }
 
-        nav ul li a:hover {
-            color: #f39c12;
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
         }
 
-        /* Section Structures */
-        section {
-            padding: 80px 0;
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
         }
 
-        .container {
-            width: 85%;
-            max-width: 1200px;
-            margin: 0 auto;
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary);
+        }
+
+        .divisions {
+            padding: 5rem 5%;
+            text-align: center;
         }
 
         .section-title {
-            text-align: center;
-            font-size: 34px;
-            margin-bottom: 50px;
-            text-transform: uppercase;
-            color: #fff;
-            letter-spacing: 1px;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            position: relative;
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 80px;
-            height: 4px;
-            background: #f39c12;
-            margin: 12px auto 0;
-            border-radius: 2px;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary);
+            margin: 10px auto 0;
         }
 
-        /* About Section */
-        #about {
-            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-            text-align: center;
-        }
-
-        .about-box {
-            max-width: 850px;
-            margin: 0 auto;
-            background: rgba(31, 40, 51, 0.8);
-            padding: 40px;
-            border-radius: 10px;
-            border: 1px solid rgba(243, 156, 18, 0.3);
-        }
-
-        .about-box p {
-            font-size: 18px;
-            color: #e5e5e5;
-            margin-bottom: 15px;
-        }
-
-        /* Departments Service Grid */
-        #departments {
-            background-color: #0b0c10;
-        }
-
-        .dept-grid {
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
         }
 
-        .dept-card {
-            background: #1f2833;
-            border: 1px solid #2c3e50;
-            border-radius: 12px;
-            padding: 35px 25px;
-            transition: all 0.3s ease;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .dept-card:hover {
-            transform: translateY(-8px);
-            border-color: #f39c12;
-            box-shadow: 0 10px 20px rgba(243, 156, 18, 0.15);
-        }
-
-        .card-header {
-            margin-bottom: 20px;
-        }
-
-        .dept-card i.main-icon {
-            font-size: 40px;
-            color: #f39c12;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .dept-card h3 {
-            font-size: 20px;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .dept-tag {
-            font-size: 11px;
-            color: #f39c12;
-            background: rgba(243, 156, 18, 0.1);
-            padding: 3px 8px;
-            border-radius: 3px;
-            display: inline-block;
-            margin-top: 5px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .dept-card ul {
-            list-style: none;
-            text-align: left;
-            margin-bottom: 25px;
-        }
-
-        .dept-card ul li {
-            margin-bottom: 12px;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #d1d2d4;
-        }
-
-        .dept-card ul li i {
-            color: #2ecc71;
-            font-size: 13px;
-        }
-
-        .btn-dept-contact {
-            background: transparent;
-            color: #fff;
-            border: 1px solid #f39c12;
-            padding: 10px 15px;
-            text-align: center;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            display: block;
-        }
-
-        .btn-dept-contact:hover {
-            background: #f39c12;
-            color: #0b0c10;
-        }
-
-        /* Core Destinations Section */
-        #destinations {
-            background-color: #12141c;
-        }
-
-        .dest-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .dest-card {
-            background: #1f2833;
-            padding: 25px;
-            text-align: center;
+        .card {
+            background: white;
+            padding: 2.5rem 1.5rem;
             border-radius: 8px;
-            font-weight: 600;
-            font-size: 18px;
-            color: #fff;
-            border-left: 4px solid #f39c12;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
         }
 
-        /* Contact Details Layout */
-        #contact {
-            background-color: #0b0c10;
+        .card:hover {
+            transform: translateY(-5px);
         }
 
-        .contact-wrapper {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 50px;
-            align-items: start;
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
         }
 
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .info-row {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            background: #1f2833;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        .info-row i {
-            font-size: 24px;
-            color: #f39c12;
-            background: rgba(243, 156, 18, 0.1);
-            padding: 15px;
-            border-radius: 50%;
-            width: 55px;
-            height: 55px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .info-row h4 {
-            font-size: 14px;
-            color: #95a5a6;
-            text-transform: uppercase;
-        }
-
-        .info-row a {
-            font-size: 18px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .info-row a:hover {
-            color: #f39c12;
-        }
-
-        /* Scan to Chat Container Blocks */
-        .qr-section {
-            background: #1f2833;
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px dashed #f39c12;
+        .destinations {
+            background-color: #edf2f7;
+            padding: 5rem 5%;
             text-align: center;
         }
 
-        .qr-section h4 {
-            color: #fff;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .qr-container {
+        .dest-tags {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 1rem;
             flex-wrap: wrap;
+            margin-top: 2rem;
         }
 
-        .qr-box {
-            background: #fff;
-            padding: 15px;
+        .tag {
+            background: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 600;
+            color: var(--secondary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .contact-section {
+            padding: 5rem 5%;
+            background-color: white;
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--light);
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .whatsapp-channel-box {
+            background-color: #e3faf1;
+            border: 1px solid #c3f3df;
+            padding: 1.5rem;
             border-radius: 8px;
-            width: 160px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            margin-bottom: 2rem;
         }
 
-        .qr-box img {
-            width: 130px;
-            height: 130px;
-            object-fit: contain;
-            display: block;
-            margin: 0 auto 10px;
+        .whatsapp-channel-box h4 {
+            color: #128c7e;
+            margin-bottom: 0.5rem;
         }
 
-        .qr-box span {
-            color: #333;
-            font-size: 14px;
-            font-weight: bold;
-            display: block;
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .qr-box span i {
-            margin-right: 5px;
-        }
-
-        .wechat-color { color: #7bb32e !important; }
-        .whatsapp-color { color: #25D366 !important; }
-
-        /* Footer Networks Layout */
-        .social-bar {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #2c3e50;
-        }
-
-        .social-bar p {
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 1px;
-        }
-
-        .social-icons a {
-            color: #fff;
-            font-size: 24px;
-            margin: 0 15px;
-            transition: color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: #f39c12;
+        .btn-whatsapp:hover {
+            background-color: #128c7e;
         }
 
         footer {
-            background-color: #12141c;
-            color: #7f8c8d;
+            background-color: var(--primary);
+            color: #a0aec0;
             text-align: center;
-            padding: 25px 0;
-            font-size: 14px;
+            padding: 2rem 5%;
+            font-size: 0.9rem;
+            border-top: 1px solid #2d3748;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 1rem; }
+            nav a { margin: 0 1rem; }
+            .hero h2 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
     <header>
-        <div class="nav-container">
-            <div class="logo">KC Masters</div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#departments">Departments</a></li>
-                    <li><a href="#destinations">Destinations</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <div class="logo">
+            <h1>KC <span>MASTERS</span></h1>
         </div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="about-box">
-                <h2 class="section-title">About KC Masters</h2>
-                <p>KC Masters functions as an elite multi-divisional corporation delivering premium vehicle imports, worldwide cargo sourcing, international academic scholarship management, and global flight bookings.</p>
-                <p><strong>Effortless • Secure • Premium</strong></p>
+    <section class="hero">
+        <h2>Premium Cargo & Global Logistics</h2>
+        <p>Exporting electronics, heavy machinery, vehicles, and coordinating global travel from China straight to Southern Africa.</p>
+        <div class="btn-group">
+            <a href="https://wa.me/260770665125?text=Hello%20KC%20Masters,%20I%20would%20like%20to%20inquire%20about%20your%20services." class="btn btn-primary" target="_blank">Chat with an Agent</a>
+            <a href="https://chat.whatsapp.com/BfMJujtMdSH89HoCh2V2wX?mode=gi_t" class="btn btn-outline" target="_blank">Join Updates Group</a>
+        </div>
+    </section>
+
+    <section id="services" class="divisions">
+        <h2 class="section-title">Our Operational Divisions</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>KC Masters Motors</h3>
+                <p>Procurement, shipping, and clearing of commercial machinery, automotive parts, and consumer vehicles directly from global manufacturing hubs.</p>
+            </div>
+            <div class="card">
+                <h3>KC Masters Flights</h3>
+                <p>Seamless international flight bookings, corporate travel coordination, and itineraries tailored to business and bulk trading schedules.</p>
+            </div>
+            <div class="card">
+                <h3>Worldwide Deliveries</h3>
+                <p>Specialized air and sea freight cargo infrastructure focusing heavily on moving high-demand electronics and freight from China to your doorstep.</p>
             </div>
         </div>
     </section>
 
-    <!-- Operational Departments Section -->
-    <section id="departments">
-        <div class="container">
-            <h2 class="section-title">Our Service Departments</h2>
-            <div class="dept-grid">
-                
-                <!-- 1. Vehicles Department -->
-                <div class="dept-card">
-                    <div class="card-header">
-                        <i class="fa-solid fa-car main-icon"></i>
-                        <h3>Vehicles Department</h3>
-                        <span class="dept-tag">KC Motors</span>
-                    </div>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> High-End Vehicle Sourcing & Imports</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Port Clearing & Transit Registration</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Secure Delivery to all Regional Borders</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Luxury & Reliable Car Hire Fleet</li>
-                    </ul>
-                    <a href="#contact" class="btn-dept-contact">Inquire Vehicles</a>
-                </div>
-
-                <!-- 2. Flight Booking Department -->
-                <div class="dept-card">
-                    <div class="card-header">
-                        <i class="fa-solid fa-plane-departure main-icon"></i>
-                        <h3>Flight Booking Dept</h3>
-                        <span class="dept-tag">KC Travel</span>
-                    </div>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Highly Affordable International Tickets</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Rapid Schedulers & Group Bookings</li>
-                        <li><i class="fa-solid fa-circle-check"></i> 24/7 Trusted Agent Route Support</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Worldwide Destination Options</li>
-                    </ul>
-                    <a href="#contact" class="btn-dept-contact">Book Flight Ticket</a>
-                </div>
-
-                <!-- 3. Phones Department -->
-                <div class="dept-card">
-                    <div class="card-header">
-                        <i class="fa-solid fa-mobile-screen-button main-icon"></i>
-                        <h3>Phones Department</h3>
-                        <span class="dept-tag">KC Sourcing</span>
-                    </div>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Brand New Premium Smartphone Sourcing</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Grade-A Pre-Owned Quality Devices</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Bulk Orders & Secure Secure Shipments</li>
-                    </ul>
-                    <a href="#contact" class="btn-dept-contact">Order Phones</a>
-                </div>
-
-                <!-- 4. Laptops & Electronics Dept -->
-                <div class="dept-card">
-                    <div class="card-header">
-                        <i class="fa-solid fa-laptop main-icon"></i>
-                        <h3>Laptops & Tech Dept</h3>
-                        <span class="dept-tag">KC Electronics</span>
-                    </div>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Professional Laptops & Business Tech</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Smart TVs, Media Systems & Speakers</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Professional Sourcing Cameras & Accessories</li>
-                    </ul>
-                    <a href="#contact" class="btn-dept-contact">Inquire Electronics</a>
-                </div>
-
-                <!-- 5. Shoes & Footwear Dept -->
-                <div class="dept-card">
-                    <div class="card-header">
-                        <i class="fa-solid fa-shoe-prints main-icon"></i>
-                        <h3>Shoes & Footwear</h3>
-                        <span class="dept-tag">KC Luxury Feet</span>
-                    </div>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Premium Sneakers & Athletic Shoes</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Formal, Designer, & Casual Footwear</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Bulk Sourcing Options for Retailers</li>
-                    </ul>
-                    <a href="#contact" class="btn-dept-contact">Source Footwear</a>
-                </div>
-
-                <!-- 6. Clothing & Fashion Dept -->
-                <div class="dept-card">
-                    <div class="card-header">
-                        <i class="fa-solid fa-shirt main-icon"></i>
-                        <h3>Clothing & Fashion</h3>
-                        <span class="dept-tag">KC Supply</span>
-                    </div>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Designer Wardrobes, Clothes & Apparel</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Luxury Brand Handbags & Leather Goods</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Quality Sourced Seasonal Collections</li>
-                    </ul>
-                    <a href="#contact" class="btn-dept-contact">Source Apparel</a>
-                </div>
-
-                <!-- 7. Human Hair Department -->
-                <div class="dept-card">
-                    <div class="card-header">
-                        <i class="fa-solid fa-sparkles main-icon"></i>
-                        <h3>Human Hair Dept</h3>
-                        <span class="dept-tag">KC Hair Industry</span>
-                    </div>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> 100% Genuine Quality Human Hair</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Luxury Wigs Sourced for Ladies</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Verified Factory Sourcing directly from China</li>
-                    </ul>
-                    <a href="#contact" class="btn-dept-contact">Source Hair/Wigs</a>
-                </div>
-
-                <!-- 8. Scholarship & Education Dept -->
-                <div class="dept-card">
-                    <div class="card-header">
-                        <i class="fa-solid fa-graduation-cap main-icon"></i>
-                        <h3>Scholarship Section</h3>
-                        <span class="dept-tag">KC Academics</span>
-                    </div>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> International Academic Program Placements</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Fully & Partially Funded Scholarships</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Route Coordination (UK, US, RU, CN, JP, IN)</li>
-                    </ul>
-                    <a href="#contact" class="btn-dept-contact">Apply for Placement</a>
-                </div>
-
-            </div>
+    <section id="destinations" class="destinations">
+        <h2 class="section-title">Primary Core Destinations</h2>
+        <p>Providing direct freight corridors, customs clearance structures, and local hub support across key regions:</p>
+        <div class="dest-tags">
+            <div class="tag">Zambia</div>
+            <div class="tag">Zimbabwe</div>
+            <div class="tag">China Hub (Guangzhou / Yiwu)</div>
+            <div class="tag">Southern Africa Regions</div>
         </div>
     </section>
 
-    <!-- Core Regional Logistics Destinations -->
-    <section id="destinations">
-        <div class="container">
-            <h2 class="section-title">Core Delivery Destinations</h2>
-            <div class="dest-grid">
-                <div class="dest-card">Zambia</div>
-                <div class="dest-card">Zimbabwe</div>
-                <div class="dest-card">Botswana</div>
-                <div class="dest-card">South Africa</div>
-                <div class="dest-card">Mozambique</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Channels & Scan Area -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Connect with a Department Head</h2>
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
             
-            <div class="contact-wrapper">
-                
-                <!-- Communication Channels -->
-                <div class="contact-details">
-                    <div class="info-row">
-                        <i class="fa-solid fa-envelope"></i>
-                        <div>
-                            <h4>Global Email</h4>
-                            <a href="mailto:kcmastersglobal@gmail.com">kcmastersglobal@gmail.com</a>
-                        </div>
-                    </div>
-
-                    <div class="info-row">
-                        <i class="fa-solid fa-phone"></i>
-                        <div>
-                            <h4>Zambia Office HotLine</h4>
-                            <a href="tel:+260770665125">+260 770 665 125</a>
-                        </div>
-                    </div>
-
-                    <div class="info-row">
-                        <i class="fa-solid fa-phone"></i>
-                        <div>
-                            <h4>China Sourcing Office</h4>
-                            <a href="tel:+8613259402608">+86 132 5940 2608</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Scan To Chat QR Layout -->
-                <div class="qr-section">
-                    <h4>Scan to Chat Instantly</h4>
-                    <div class="qr-container">
-                        
-                        <!-- WeChat QR Container -->
-                        <div class="qr-box">
-                            <!-- Drag your WeChat QR screenshot into your GitHub directory named 'wechat-qr.png' -->
-                            <img src="wechat-qr.png" alt="WeChat QR Code" onerror="this.src='https://placehold.co/150?text=WeChat+QR'">
-                            <span class="wechat-color"><i class="fa-brands fa-weixin"></i>WeChat</span>
-                        </div>
-
-                        <!-- WhatsApp QR Container -->
-                        <div class="qr-box">
-                            <!-- Drag your WhatsApp QR screenshot into your GitHub directory named 'whatsapp-qr.png' -->
-                            <img src="whatsapp-qr.png" alt="WhatsApp QR Code" onerror="this.src='https://placehold.co/150?text=WhatsApp+QR'">
-                            <span class="whatsapp-color"><i class="fa-brands fa-whatsapp"></i>WhatsApp</span>
-                        </div>
-
-                    </div>
-                </div>
-
+            <!-- WhatsApp Group Link Section -->
+            <div class="whatsapp-channel-box">
+                <h4>Join Our Logistics Community</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #4a5568;">Get instant tracking updates, bulk shipping announcements, and rate updates directly in our group.</p>
+                <a href="https://chat.whatsapp.com/BfMJujtMdSH89HoCh2V2wX?mode=gi_t" class="btn btn-whatsapp" target="_blank">
+                    Join Official WhatsApp Group
+                </a>
             </div>
 
-            <!-- Social Footprint -->
-            <div class="social-bar">
-                <p>Find us on social networks</p>
-                <div class="social-icons">
-                    <a href="https://instagram.com/kc_masters_motors" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                </div>
-            </div>
-
+            <!-- Direct Contact Section -->
+            <h3>Direct Inquiry</h3>
+            <p style="margin-bottom: 1.5rem;">Have a specific order request, electronics shipment, or flight booking? Speak directly with our support desk.</p>
+            <a href="https://wa.me/260770665125?text=Hello%20KC%20Masters,%20I%20need%20assistance%20with%20a%20shipment/booking." class="btn btn-primary" target="_blank">
+                Message +260 770 665 125
+            </a>
         </div>
     </section>
 
-    <!-- Footer Area -->
     <footer>
-        <p>&copy; 2026 KC MASTERS. All Rights Reserved. Luxury Freight, Sourcing & Travel Logistics.</p>
+        <p>&copy; 2026 KC Masters. All Rights Reserved. Cargo, Motors & Logistics Solutions.</p>
     </footer>
 
 </body>
