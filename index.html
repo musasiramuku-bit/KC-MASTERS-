@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KC MASTERS | Premium Export China to Southern Africa</title>
-    <!-- Font Awesome for Icons -->
+    <title>KC MASTERS | Effortless • Secure • Premium</title>
+    <!-- Font Awesome for Modern Icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <style>
-        /* Reset and Base Styles */
+        /* Premium Dark & Gold Theme Styling */
         * {
             margin: 0;
             padding: 0;
@@ -16,19 +16,19 @@
         }
 
         body {
-            background-color: #f8f9fa;
-            color: #333;
+            background-color: #0b0c10;
+            color: #c5c6c8;
             line-height: 1.6;
         }
 
         header {
-            background-color: #1a252f;
-            color: #fff;
+            background-color: #1f2833;
             padding: 20px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 2px solid #f39c12;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
 
         .nav-container {
@@ -41,11 +41,11 @@
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 26px;
+            font-weight: 800;
             color: #f39c12;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         nav ul {
@@ -61,7 +61,7 @@
             color: #fff;
             text-decoration: none;
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 600;
             transition: color 0.3s ease;
         }
 
@@ -69,7 +69,7 @@
             color: #f39c12;
         }
 
-        /* Section Layouts */
+        /* Reusable Layout Sections */
         section {
             padding: 80px 0;
         }
@@ -82,107 +82,156 @@
 
         .section-title {
             text-align: center;
-            font-size: 32px;
-            margin-bottom: 40px;
-            position: relative;
+            font-size: 34px;
+            margin-bottom: 50px;
             text-transform: uppercase;
-            color: #1a252f;
+            color: #fff;
+            letter-spacing: 1px;
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 60px;
+            width: 80px;
             height: 4px;
             background: #f39c12;
-            margin: 10px auto 0;
+            margin: 12px auto 0;
             border-radius: 2px;
         }
 
         /* About Section */
         #about {
-            background-color: #ffffff;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            text-align: center;
         }
 
-        .about-content {
-            text-align: center;
-            max-width: 800px;
+        .about-box {
+            max-width: 850px;
             margin: 0 auto;
+            background: rgba(31, 40, 51, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid rgba(243, 156, 18, 0.3);
+        }
+
+        .about-box p {
             font-size: 18px;
-            color: #555;
-        }
-
-        /* Destinations Section */
-        #destinations {
-            background-color: #f4f6f7;
-        }
-
-        .destination-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        .destination-card {
-            background: #fff;
-            padding: 30px 20px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-bottom: 3px solid transparent;
-        }
-
-        .destination-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-            border-bottom: 3px solid #f39c12;
-        }
-
-        .destination-card i {
-            font-size: 35px;
-            color: #f39c12;
+            color: #e5e5e5;
             margin-bottom: 15px;
         }
 
-        .destination-card h3 {
-            font-size: 20px;
-            color: #1a252f;
+        /* Business Categories Grid */
+        #categories {
+            background-color: #0b0c10;
         }
 
-        /* Contact Section */
-        #contact {
-            background-color: #ffffff;
-        }
-
-        .contact-grid {
+        .category-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
         }
 
-        .contact-info {
+        .category-card {
+            background: #1f2833;
+            border: 1px solid #2c3e50;
+            border-radius: 12px;
+            padding: 35px 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            border-color: #f39c12;
+            box-shadow: 0 10px 20px rgba(243, 156, 18, 0.15);
+        }
+
+        .category-card i.main-icon {
+            font-size: 45px;
+            color: #f39c12;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .category-card h3 {
+            font-size: 22px;
+            color: #fff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .category-card ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .category-card ul li {
+            margin-bottom: 12px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .category-card ul li i {
+            color: #2ecc71;
+            font-size: 14px;
+        }
+
+        /* Southern Africa Destinations Grid */
+        #destinations {
+            background-color: #12141c;
+        }
+
+        .dest-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .dest-card {
+            background: #1f2833;
+            padding: 25px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 18px;
+            color: #fff;
+            border-left: 4px solid #f39c12;
+        }
+
+        /* Contact & Scan-To-Chat Grid */
+        #contact {
+            background-color: #0b0c10;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-details {
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 20px;
         }
 
-        .contact-item {
+        .info-row {
             display: flex;
             align-items: center;
             gap: 20px;
-            background: #fdfefe;
+            background: #1f2833;
             padding: 20px;
             border-radius: 8px;
-            border: 1px solid #eef2f3;
         }
 
-        .contact-item i {
+        .info-row i {
             font-size: 24px;
-            color: #fff;
-            background: #1a252f;
+            color: #f39c12;
+            background: rgba(243, 156, 18, 0.1);
             padding: 15px;
             border-radius: 50%;
             width: 55px;
@@ -192,68 +241,122 @@
             justify-content: center;
         }
 
-        .contact-item-text h4 {
-            font-size: 16px;
-            color: #7f8c8d;
+        .info-row h4 {
+            font-size: 14px;
+            color: #95a5a6;
             text-transform: uppercase;
         }
 
-        .contact-item-text a {
+        .info-row a {
             font-size: 18px;
-            color: #1a252f;
+            color: #fff;
             text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-item-text a:hover {
-            color: #f39c12;
-        }
-
-        /* Quick Action Buttons */
-        .btn-group {
-            display: flex;
-            gap: 15px;
-            margin-top: 10px;
-        }
-
-        .btn-whatsapp {
-            background-color: #25D366;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
             font-weight: bold;
         }
 
-        .btn-whatsapp:hover {
-            background-color: #128C7E;
-            color: white;
+        .info-row a:hover {
+            color: #f39c12;
         }
 
-        /* Footer */
+        /* QR Scan to Chat Boxes */
+        .qr-section {
+            background: #1f2833;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px dashed #f39c12;
+            text-align: center;
+        }
+
+        .qr-section h4 {
+            color: #fff;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .qr-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .qr-box {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            width: 160px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .qr-box img {
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        .qr-box span {
+            color: #333;
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+        }
+
+        .qr-box span i {
+            margin-right: 5px;
+        }
+
+        .wechat-color { color: #7bb32e !important; }
+        .whatsapp-color { color: #25D366 !important; }
+
+        /* Social Media Bar */
+        .social-bar {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #2c3e50;
+        }
+
+        .social-bar p {
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #f39c12;
+        }
+
         footer {
-            background-color: #1a252f;
+            background-color: #12141c;
             color: #7f8c8d;
             text-align: center;
             padding: 25px 0;
             font-size: 14px;
-            border-top: 1px solid #2c3e50;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Header -->
+    <!-- Navigation Bar -->
     <header>
         <div class="nav-container">
             <div class="logo">KC Masters</div>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#categories">Services</a></li>
                     <li><a href="#destinations">Destinations</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -264,97 +367,150 @@
     <!-- About Section -->
     <section id="about">
         <div class="container">
-            <h2 class="section-title">About KC Masters</h2>
-            <div class="about-content">
-                <p>KC Masters is a premier premium logistics and electronics export partner connecting China directly to Southern Africa. We specialize in supply chain sourcing, safe product handling, and reliable cross-border freight forward tracking solutions, ensuring your cargo arrives securely and on schedule.</p>
+            <div class="about-box">
+                <h2 class="section-title">About KC Masters</h2>
+                <p>KC Masters delivers world-class, premium logistics, vehicle sourcing, global freight options, and travel support mechanisms tailored seamlessly for international and domestic clientele.</p>
+                <p><strong>Effortless • Secure • Premium</strong></p>
             </div>
         </div>
     </section>
 
-    <!-- Destinations Section -->
+    <!-- Services / Categories Section -->
+    <section id="categories">
+        <div class="container">
+            <h2 class="section-title">Our Operational Divisions</h2>
+            <div class="category-grid">
+                
+                <!-- Category 1: Motors -->
+                <div class="category-card">
+                    <i class="fa-solid fa-car main-icon"></i>
+                    <h3>KC Masters Motors</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-circle-check"></i> Vehicle Imports Sourcing</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Port Vehicle Registration</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Clearing & Delivery to all Borders</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Reliable Premium Car Hire Services</li>
+                    </ul>
+                </div>
+
+                <!-- Category 2: Flights -->
+                <div class="category-card">
+                    <i class="fa-solid fa-plane-departure main-icon"></i>
+                    <h3>KC Masters Flights</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-circle-check"></i> Affordable Global Flight Tickets</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Fast, Online Booking Management</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Trusted Travel Agency Assistance</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Global Destinations & Routes</li>
+                    </ul>
+                </div>
+
+                <!-- Category 3: Worldwide Deliveries -->
+                <div class="category-card">
+                    <i class="fa-solid fa-earth-africa main-icon"></i>
+                    <h3>Worldwide Deliveries</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-circle-check"></i> Phones (Brand New & Pre-Owned)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Watches, Cameras & Electronics</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Shoes, Clothes & Handbags</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Premium Wigs & Quality Human Hair</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Global Scholarship Coordination</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Southern Africa Destinations Section -->
     <section id="destinations">
         <div class="container">
-            <h2 class="section-title">Southern Africa Destinations</h2>
-            <div class="destination-grid">
-                <div class="destination-card">
-                    <i class="fa-solid fa-ship"></i>
-                    <h3>Zambia</h3>
-                </div>
-                <div class="destination-card">
-                    <i class="fa-solid fa-ship"></i>
-                    <h3>Zimbabwe</h3>
-                </div>
-                <div class="destination-card">
-                    <i class="fa-solid fa-ship"></i>
-                    <h3>Botswana</h3>
-                </div>
-                <div class="destination-card">
-                    <i class="fa-solid fa-ship"></i>
-                    <h3>South Africa</h3>
-                </div>
-                <div class="destination-card">
-                    <i class="fa-solid fa-ship"></i>
-                    <h3>Mozambique</h3>
-                </div>
+            <h2 class="section-title">Southern Africa Core Destinations</h2>
+            <div class="dest-grid">
+                <div class="dest-card">Zambia</div>
+                <div class="dest-card">Zimbabwe</div>
+                <div class="dest-card">Botswana</div>
+                <div class="dest-card">South Africa</div>
+                <div class="dest-card">Mozambique</div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact & Scan to Chat Section -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Contact Our Logistics Team</h2>
-            <div class="contact-grid">
+            <h2 class="section-title">Get In Touch Directly</h2>
+            
+            <div class="contact-wrapper">
                 
-                <div class="contact-info">
-                    <!-- Email -->
-                    <div class="contact-item">
+                <!-- Communication Channels -->
+                <div class="contact-details">
+                    <div class="info-row">
                         <i class="fa-solid fa-envelope"></i>
-                        <div class="contact-item-text">
-                            <h4>Email Us</h4>
+                        <div>
+                            <h4>Email Channel</h4>
                             <a href="mailto:kcmastersglobal@gmail.com">kcmastersglobal@gmail.com</a>
                         </div>
                     </div>
 
-                    <!-- Zambia Office/Line -->
-                    <div class="contact-item">
+                    <div class="info-row">
                         <i class="fa-solid fa-phone"></i>
-                        <div class="contact-item-text">
-                            <h4>Zambia HotLine</h4>
+                        <div>
+                            <h4>Zambia Hotline</h4>
                             <a href="tel:+260770665125">+260 770 665 125</a>
-                            <div class="btn-group">
-                                <a href="https://wa.me/260770665125" target="_blank" class="btn-whatsapp">
-                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
-                                </a>
-                            </div>
                         </div>
                     </div>
 
-                    <!-- China Office/Line -->
-                    <div class="contact-item">
+                    <div class="info-row">
                         <i class="fa-solid fa-phone"></i>
-                        <div class="contact-item-text">
-                            <h4>China MainLine</h4>
+                        <div>
+                            <h4>China Mainline</h4>
                             <a href="tel:+8613259402608">+86 132 5940 2608</a>
-                            <div class="btn-group">
-                                <a href="https://wa.me/8613259402608" target="_blank" class="btn-whatsapp">
-                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
-                                </a>
-                            </div>
                         </div>
                     </div>
+                </div>
 
+                <!-- Scan To Chat QR Layout -->
+                <div class="qr-section">
+                    <h4>Scan to Chat Instantly</h4>
+                    <div class="qr-container">
+                        
+                        <!-- WeChat QR Code Container -->
+                        <div class="qr-box">
+                            <!-- Make sure your WeChat QR image file is saved as wechat-qr.png inside your repo -->
+                            <img src="wechat-qr.png" alt="WeChat QR Code" onerror="this.src='https://placehold.co/150?text=WeChat+QR'">
+                            <span class="wechat-color"><i class="fa-brands fa-weixin"></i>WeChat</span>
+                        </div>
+
+                        <!-- WhatsApp QR Code Container -->
+                        <div class="qr-box">
+                            <!-- Make sure your WhatsApp QR image file is saved as whatsapp-qr.png inside your repo -->
+                            <img src="whatsapp-qr.png" alt="WhatsApp QR Code" onerror="this.src='https://placehold.co/150?text=WhatsApp+QR'">
+                            <span class="whatsapp-color"><i class="fa-brands fa-whatsapp"></i>WhatsApp</span>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
+
+            <!-- Social Media Handles from Flyer -->
+            <div class="social-bar">
+                <p>Find us on social networks</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/kc_masters_motors" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Area -->
     <footer>
-        <p>&copy; 2026 KC MASTERS. All Rights Reserved. Premium Phone & Cargo Export.</p>
+        <p>&copy; 2026 KC MASTERS. All Rights Reserved. Luxury Freight, Sourcing & Travel Logistics.</p>
     </footer>
 
 </body>
-</html>
 </html>
