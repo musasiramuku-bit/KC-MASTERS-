@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KC MASTERS | Effortless • Secure • Premium</title>
-    <!-- Font Awesome for Modern Icons -->
+    <title>KC MASTERS | Effortless • Secure • Premium Logistics</title>
+    <!-- Font Awesome for Department Icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <style>
         /* Premium Dark & Gold Theme Styling */
@@ -69,7 +69,7 @@
             color: #f39c12;
         }
 
-        /* Reusable Layout Sections */
+        /* Section Structures */
         section {
             padding: 80px 0;
         }
@@ -101,14 +101,14 @@
 
         /* About Section */
         #about {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
             text-align: center;
         }
 
         .about-box {
             max-width: 850px;
             margin: 0 auto;
-            background: rgba(31, 40, 51, 0.7);
+            background: rgba(31, 40, 51, 0.8);
             padding: 40px;
             border-radius: 10px;
             border: 1px solid rgba(243, 156, 18, 0.3);
@@ -120,66 +120,105 @@
             margin-bottom: 15px;
         }
 
-        /* Business Categories Grid */
-        #categories {
+        /* Departments Service Grid */
+        #departments {
             background-color: #0b0c10;
         }
 
-        .category-grid {
+        .dept-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
-        .category-card {
+        .dept-card {
             background: #1f2833;
             border: 1px solid #2c3e50;
             border-radius: 12px;
             padding: 35px 25px;
             transition: all 0.3s ease;
             position: relative;
-            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .category-card:hover {
+        .dept-card:hover {
             transform: translateY(-8px);
             border-color: #f39c12;
             box-shadow: 0 10px 20px rgba(243, 156, 18, 0.15);
         }
 
-        .category-card i.main-icon {
-            font-size: 45px;
-            color: #f39c12;
+        .card-header {
             margin-bottom: 20px;
+        }
+
+        .dept-card i.main-icon {
+            font-size: 40px;
+            color: #f39c12;
+            margin-bottom: 15px;
             display: block;
         }
 
-        .category-card h3 {
-            font-size: 22px;
+        .dept-card h3 {
+            font-size: 20px;
             color: #fff;
-            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .dept-tag {
+            font-size: 11px;
+            color: #f39c12;
+            background: rgba(243, 156, 18, 0.1);
+            padding: 3px 8px;
+            border-radius: 3px;
+            display: inline-block;
+            margin-top: 5px;
+            font-weight: bold;
             text-transform: uppercase;
         }
 
-        .category-card ul {
+        .dept-card ul {
             list-style: none;
             text-align: left;
+            margin-bottom: 25px;
         }
 
-        .category-card ul li {
+        .dept-card ul li {
             margin-bottom: 12px;
-            font-size: 15px;
+            font-size: 14px;
             display: flex;
             align-items: center;
             gap: 10px;
+            color: #d1d2d4;
         }
 
-        .category-card ul li i {
+        .dept-card ul li i {
             color: #2ecc71;
-            font-size: 14px;
+            font-size: 13px;
         }
 
-        /* Southern Africa Destinations Grid */
+        .btn-dept-contact {
+            background: transparent;
+            color: #fff;
+            border: 1px solid #f39c12;
+            padding: 10px 15px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .btn-dept-contact:hover {
+            background: #f39c12;
+            color: #0b0c10;
+        }
+
+        /* Core Destinations Section */
         #destinations {
             background-color: #12141c;
         }
@@ -201,7 +240,7 @@
             border-left: 4px solid #f39c12;
         }
 
-        /* Contact & Scan-To-Chat Grid */
+        /* Contact Details Layout */
         #contact {
             background-color: #0b0c10;
         }
@@ -258,7 +297,7 @@
             color: #f39c12;
         }
 
-        /* QR Scan to Chat Boxes */
+        /* Scan to Chat Container Blocks */
         .qr-section {
             background: #1f2833;
             padding: 30px;
@@ -312,7 +351,7 @@
         .wechat-color { color: #7bb32e !important; }
         .whatsapp-color { color: #25D366 !important; }
 
-        /* Social Media Bar */
+        /* Footer Networks Layout */
         .social-bar {
             text-align: center;
             margin-top: 40px;
@@ -356,7 +395,7 @@
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#categories">Services</a></li>
+                    <li><a href="#departments">Departments</a></li>
                     <li><a href="#destinations">Destinations</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -369,63 +408,133 @@
         <div class="container">
             <div class="about-box">
                 <h2 class="section-title">About KC Masters</h2>
-                <p>KC Masters delivers world-class, premium logistics, vehicle sourcing, global freight options, and travel support mechanisms tailored seamlessly for international and domestic clientele.</p>
+                <p>KC Masters functions as an elite multi-divisional corporation delivering premium vehicle imports, worldwide cargo sourcing, international academic scholarship management, and global flight bookings.</p>
                 <p><strong>Effortless • Secure • Premium</strong></p>
             </div>
         </div>
     </section>
 
-    <!-- Services / Categories Section -->
-    <section id="categories">
+    <!-- Operational Departments Section -->
+    <section id="departments">
         <div class="container">
-            <h2 class="section-title">Our Operational Divisions</h2>
-            <div class="category-grid">
+            <h2 class="section-title">Our Service Departments</h2>
+            <div class="dept-grid">
                 
-                <!-- Category 1: Motors -->
-                <div class="category-card">
-                    <i class="fa-solid fa-car main-icon"></i>
-                    <h3>KC Masters Motors</h3>
+                <!-- 1. Vehicles Department -->
+                <div class="dept-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-car main-icon"></i>
+                        <h3>Vehicles Department</h3>
+                        <span class="dept-tag">KC Motors</span>
+                    </div>
                     <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Vehicle Imports Sourcing</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Port Vehicle Registration</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Clearing & Delivery to all Borders</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Reliable Premium Car Hire Services</li>
+                        <li><i class="fa-solid fa-circle-check"></i> High-End Vehicle Sourcing & Imports</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Port Clearing & Transit Registration</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Secure Delivery to all Regional Borders</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Luxury & Reliable Car Hire Fleet</li>
                     </ul>
+                    <a href="#contact" class="btn-dept-contact">Inquire Vehicles</a>
                 </div>
 
-                <!-- Category 2: Flights -->
-                <div class="category-card">
-                    <i class="fa-solid fa-plane-departure main-icon"></i>
-                    <h3>KC Masters Flights</h3>
+                <!-- 2. Flight Booking Department -->
+                <div class="dept-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-plane-departure main-icon"></i>
+                        <h3>Flight Booking Dept</h3>
+                        <span class="dept-tag">KC Travel</span>
+                    </div>
                     <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Affordable Global Flight Tickets</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Fast, Online Booking Management</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Trusted Travel Agency Assistance</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Global Destinations & Routes</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Highly Affordable International Tickets</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Rapid Schedulers & Group Bookings</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 24/7 Trusted Agent Route Support</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Worldwide Destination Options</li>
                     </ul>
+                    <a href="#contact" class="btn-dept-contact">Book Flight Ticket</a>
                 </div>
 
-                <!-- Category 3: Worldwide Deliveries -->
-                <div class="category-card">
-                    <i class="fa-solid fa-earth-africa main-icon"></i>
-                    <h3>Worldwide Deliveries</h3>
+                <!-- 3. Phones Department -->
+                <div class="dept-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-mobile-screen-button main-icon"></i>
+                        <h3>Phones Department</h3>
+                        <span class="dept-tag">KC Sourcing</span>
+                    </div>
                     <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Phones (Brand New & Pre-Owned)</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Watches, Cameras & Electronics</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Shoes, Clothes & Handbags</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Premium Wigs & Quality Human Hair</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Global Scholarship Coordination</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Brand New Premium Smartphone Sourcing</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Grade-A Pre-Owned Quality Devices</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Bulk Orders & Secure Secure Shipments</li>
                     </ul>
+                    <a href="#contact" class="btn-dept-contact">Order Phones</a>
+                </div>
+
+                <!-- 4. Laptops & Electronics Dept -->
+                <div class="dept-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-laptop main-icon"></i>
+                        <h3>Laptops & Tech Dept</h3>
+                        <span class="dept-tag">KC Electronics</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-circle-check"></i> Professional Laptops & Business Tech</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Smart TVs, Media Systems & Speakers</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Professional Sourcing Cameras & Accessories</li>
+                    </ul>
+                    <a href="#contact" class="btn-dept-contact">Inquire Electronics</a>
+                </div>
+
+                <!-- 5. Clothing & Fashion Dept -->
+                <div class="dept-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-shirt main-icon"></i>
+                        <h3>Clothing & Fashion</h3>
+                        <span class="dept-tag">KC Supply</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-circle-check"></i> Designer Wardrobes, Clothes & Apparel</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Premium Shoes & Fashion Footwear</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Luxury Brand Handbags & Leather Goods</li>
+                    </ul>
+                    <a href="#contact" class="btn-dept-contact">Source Apparel</a>
+                </div>
+
+                <!-- 6. Human Hair Department -->
+                <div class="dept-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-sparkles main-icon"></i>
+                        <h3>Human Hair Dept</h3>
+                        <span class="dept-tag">KC Hair Industry</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-circle-check"></i> 100% Genuine Quality Human Hair</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Luxury Wigs Sourced for Ladies</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Verified Factory Sourcing directly from China</li>
+                    </ul>
+                    <a href="#contact" class="btn-dept-contact">Source Hair/Wigs</a>
+                </div>
+
+                <!-- 7. Scholarship & Education Dept -->
+                <div class="dept-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-graduation-cap main-icon"></i>
+                        <h3>Scholarship Section</h3>
+                        <span class="dept-tag">KC Academics</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-circle-check"></i> International Academic Program Placements</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Fully & Partially Funded Scholarships</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Route Coordination (UK, US, RU, CN, JP, IN)</li>
+                    </ul>
+                    <a href="#contact" class="btn-dept-contact">Apply for Placement</a>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Southern Africa Destinations Section -->
+    <!-- Core Regional Logistics Destinations -->
     <section id="destinations">
         <div class="container">
-            <h2 class="section-title">Southern Africa Core Destinations</h2>
+            <h2 class="section-title">Core Delivery Destinations</h2>
             <div class="dest-grid">
                 <div class="dest-card">Zambia</div>
                 <div class="dest-card">Zimbabwe</div>
@@ -436,10 +545,10 @@
         </div>
     </section>
 
-    <!-- Contact & Scan to Chat Section -->
+    <!-- Contact Channels & Scan Area -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch Directly</h2>
+            <h2 class="section-title">Connect with a Department Head</h2>
             
             <div class="contact-wrapper">
                 
@@ -448,7 +557,7 @@
                     <div class="info-row">
                         <i class="fa-solid fa-envelope"></i>
                         <div>
-                            <h4>Email Channel</h4>
+                            <h4>Global Email</h4>
                             <a href="mailto:kcmastersglobal@gmail.com">kcmastersglobal@gmail.com</a>
                         </div>
                     </div>
@@ -456,7 +565,7 @@
                     <div class="info-row">
                         <i class="fa-solid fa-phone"></i>
                         <div>
-                            <h4>Zambia Hotline</h4>
+                            <h4>Zambia Office HotLine</h4>
                             <a href="tel:+260770665125">+260 770 665 125</a>
                         </div>
                     </div>
@@ -464,7 +573,7 @@
                     <div class="info-row">
                         <i class="fa-solid fa-phone"></i>
                         <div>
-                            <h4>China Mainline</h4>
+                            <h4>China Sourcing Office</h4>
                             <a href="tel:+8613259402608">+86 132 5940 2608</a>
                         </div>
                     </div>
@@ -475,16 +584,16 @@
                     <h4>Scan to Chat Instantly</h4>
                     <div class="qr-container">
                         
-                        <!-- WeChat QR Code Container -->
+                        <!-- WeChat QR Container -->
                         <div class="qr-box">
-                            <!-- Make sure your WeChat QR image file is saved as wechat-qr.png inside your repo -->
+                            <!-- Drag your WeChat QR screenshot into your GitHub directory named 'wechat-qr.png' -->
                             <img src="wechat-qr.png" alt="WeChat QR Code" onerror="this.src='https://placehold.co/150?text=WeChat+QR'">
                             <span class="wechat-color"><i class="fa-brands fa-weixin"></i>WeChat</span>
                         </div>
 
-                        <!-- WhatsApp QR Code Container -->
+                        <!-- WhatsApp QR Container -->
                         <div class="qr-box">
-                            <!-- Make sure your WhatsApp QR image file is saved as whatsapp-qr.png inside your repo -->
+                            <!-- Drag your WhatsApp QR screenshot into your GitHub directory named 'whatsapp-qr.png' -->
                             <img src="whatsapp-qr.png" alt="WhatsApp QR Code" onerror="this.src='https://placehold.co/150?text=WhatsApp+QR'">
                             <span class="whatsapp-color"><i class="fa-brands fa-whatsapp"></i>WhatsApp</span>
                         </div>
@@ -494,7 +603,7 @@
 
             </div>
 
-            <!-- Social Media Handles from Flyer -->
+            <!-- Social Footprint -->
             <div class="social-bar">
                 <p>Find us on social networks</p>
                 <div class="social-icons">
