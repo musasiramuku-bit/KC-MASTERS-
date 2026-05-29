@@ -199,6 +199,86 @@
             font-size: 13px;
         }
 
+        /* Interactive Requirements Dropdown Styling */
+        .req-dropdown {
+            margin-bottom: 20px;
+            background: #11161d;
+            border-radius: 6px;
+            border: 1px solid rgba(243, 156, 18, 0.2);
+            overflow: hidden;
+        }
+
+        .req-summary {
+            padding: 12px 15px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #f39c12;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+        }
+
+        .req-summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .req-summary::after {
+            content: '\f107';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            transition: transform 0.3s;
+        }
+
+        details[open] .req-summary::after {
+            transform: rotate(180deg);
+        }
+
+        .req-content {
+            padding: 15px;
+            border-top: 1px solid rgba(243, 156, 18, 0.1);
+            max-height: 300px;
+            overflow-y: auto;
+            text-align: left;
+        }
+
+        .req-content h4 {
+            font-size: 13px;
+            color: #fff;
+            margin: 15px 0 8px 0;
+            text-transform: uppercase;
+            border-left: 2px solid #f39c12;
+            padding-left: 8px;
+        }
+
+        .req-content h4:first-child {
+            margin-top: 0;
+        }
+
+        .req-content ol {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .req-content ol li {
+            font-size: 12px;
+            color: #bcbcbc;
+            margin-bottom: 6px;
+            list-style-type: decimal;
+        }
+
+        .req-note {
+            font-size: 11px;
+            color: #e74c3c;
+            background: rgba(231, 76, 60, 0.1);
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
         .btn-dept-contact {
             background: transparent;
             color: #fff;
@@ -509,7 +589,7 @@
                         <li><i class="fa-solid fa-circle-check"></i> Luxury Brand Handbags & Leather Goods</li>
                         <li><i class="fa-solid fa-circle-check"></i> Quality Sourced Seasonal Collections</li>
                     </ul>
-                    <a href="https://wa.me/260770665125?text=Hello%20KC%20Masters%2C%20I'd%20like%20to%20inquire%20about%20sourcing%20apparel%20and%20fashion%20items." target="_blank" class="btn-dept-contact">Source Apparel</a>
+                    <a href="https://wa.me/260770665125?text=Hello%20KC%20Masters%2C%20I%20have%20an%20inquiry%20regarding%20laptops%20and%20tech%20electronics." target="_blank" class="btn-dept-contact">Source Apparel</a>
                 </div>
 
                 <!-- 7. Human Hair Department -->
@@ -527,7 +607,7 @@
                     <a href="https://wa.me/260770665125?text=Hello%20KC%20Masters%2C%20I'm%20interested%20in%20sourcing%20wigs%20and%20products%20from%20the%20Human%20Hair%20Dept." target="_blank" class="btn-dept-contact">Source Hair/Wigs</a>
                 </div>
 
-                <!-- 8. Scholarship & Education Dept -->
+                <!-- 8. Scholarship & Education Dept (UPDATED WITH IMAGE_3 DETAILS) -->
                 <div class="dept-card">
                     <div class="card-header">
                         <i class="fa-solid fa-graduation-cap main-icon"></i>
@@ -535,11 +615,74 @@
                         <span class="dept-tag">KC Academics</span>
                     </div>
                     <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> International Academic Program Placements</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Fully & Partially Funded Scholarships</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Route Coordination (UK, US, RU, CN, JP, IN)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Study in China: Scholarships up to 100%</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Bachelors, Masters, PhD & Non-Degree Placements</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Global Paths (UK, US, RU, CN, JP, IN)</li>
                     </ul>
-                    <a href="https://wa.me/260770665125?text=Hello%20KC%20Masters%2C%20I%20want%20to%20apply%20for%20an%20academic%20placement%20via%20KC%20Academics." target="_blank" class="btn-dept-contact">Apply for Placement</a>
+
+                    <!-- Expandable Document Requirements Dropdown -->
+                    <details class="req-dropdown">
+                        <summary class="req-summary">Application Documents</summary>
+                        <div class="req-content">
+                            <h4>Bachelors Requirements</h4>
+                            <ol>
+                                <li>Application Form</li>
+                                <li>2 Passport Size Photos (1 Blue, 1 White Background)</li>
+                                <li>Passport Scan Copy</li>
+                                <li>Graduation Certificate</li>
+                                <li>Official Certificate (Diploma)</li>
+                                <li>Academic Transcript</li>
+                                <li>Recommendation Letter</li>
+                                <li>Non-Criminal Records</li>
+                                <li>CV/Resume</li>
+                                <li>Physical Examination</li>
+                                <li>Language Proficiency</li>
+                                <li>Performances Certificate</li>
+                                <li>Bank Statement</li>
+                                <li>Study Plan</li>
+                                <li>Self-Introduction (2-3 Minutes)</li>
+                            </ol>
+
+                            <h4>Masters / PhD Requirements</h4>
+                            <ol>
+                                <li>Application Form</li>
+                                <li>2 Passport Size Photos (1 Blue, 1 White Background)</li>
+                                <li>Passport Scan Copy</li>
+                                <li>Graduation Certificate</li>
+                                <li>Official Certificate (Bachelor Degree)</li>
+                                <li>Academic Transcript</li>
+                                <li>2 Recommendation Letters from Professors</li>
+                                <li>Non-Criminal Records</li>
+                                <li>CV/Resume</li>
+                                <li>Physical Examination</li>
+                                <li>Language Proficiency</li>
+                                <li>Performances Certificate</li>
+                                <li>Bank Statement</li>
+                                <li>Research Proposal</li>
+                                <li>Published Articles (if available)</li>
+                                <li>Self-Introduction (2-3 Minutes)</li>
+                            </ol>
+
+                            <h4>Non-Degree Requirements</h4>
+                            <ol>
+                                <li>Application Form</li>
+                                <li>2 Passport Size Photos (1 Blue, 1 White Background)</li>
+                                <li>Passport Scan Copy</li>
+                                <li>Graduation Certificate</li>
+                                <li>Highest Certificate</li>
+                                <li>Academic Transcript</li>
+                                <li>Non-Criminal Records</li>
+                                <li>Physical Examination</li>
+                                <li>Bank Statement</li>
+                            </ol>
+
+                            <div class="req-note">
+                                <i class="fa-solid fa-triangle-exclamation"></i> NOTE: All documents must be in color & translated to English or Chinese (Notarized). Black & white scans are not acceptable!
+                            </div>
+                        </div>
+                    </details>
+
+                    <a href="https://wa.me/260770665125?text=Hello%20KC%20Masters%2C%20I%20want%20to%20apply%20for%20a%20Scholarship%20placement%20via%20KC%20Academics." target="_blank" class="btn-dept-contact">Apply for Placement</a>
                 </div>
 
             </div>
